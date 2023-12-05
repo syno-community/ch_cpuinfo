@@ -1,0 +1,158 @@
+# Change Log 
+
+4.2.1-r01.
+   - Update new version (ch_cpuinfo ver 4.2.1-r01) 2023.03.05
+
+   - Fixed error when users of previous version perform redo with version 4.2.0-r01
+
+4.2.0-r01.
+   - Update new version (ch_cpuinfo ver 4.2.0-r01) 2023.02.18 
+
+   - Application of AMD's CPU information collection function improvement
+
+   - xpenlib(cpu_info.sh) refered https://github.com/FOXBI/xpenlib/blob/main/cpu_info.sh 
+
+4.1.1-r01.
+   - Update new version (ch_cpuinfo ver 4.1.1-r01) 2023.02.17 
+
+   - Support for changing CPU information in Surveillance Station System information 
+     (User requests on github [Not work in Surveillance Station #34])
+     Tested DSM 7.x version & Surveillance Station 6.0.3-4473
+
+   - Modified work result comments (output when using Surveillance Station)
+
+   - Updated LANG.txt
+
+   - Add Updated date & Comment
+
+   - Updated README.md
+
+4.0.0-r01.
+   - Update new version (ch_cpuinfo ver 4.0.0-r01) 2023.02.11 
+
+   - Added intel/AMD cpu information collection function (generation output)
+    
+   - Changed the method of collecting cpu information
+     
+   - xpenlib(cpu_info.sh) refered https://github.com/FOXBI/xpenlib/blob/main/cpu_info.sh 
+   
+3.3.1-r01.
+   - Update new version (ch_cpuinfo ver 3.3.1-r01) 2021.09.30
+
+   - After executing ch_cpuinfo, add the current CPU information output before applying
+
+3.1.1-r01.
+   - Update new version (ch_cpuinfo ver 3.1.1-r01) 2021.09.26
+
+   - Support DSM 7.x above
+
+   - admin_center.js file sedding method add
+
+2.5.2-r01.
+   - Update new version (ch_cpuinfo ver 2.5.2-r01) 2021.06.21
+
+   - CPU information gathering method change for AMD/Intel(ES/Unkown) CPU
+     ex.  Genuine Intel(R) CPU  @ 2.30GHz -> Genuine Intel Unkown
+          Genuine Intel(R) CPU 0000 @ 2.00GHz -> Genuine Intel ES
+
+2.4.1-r01.
+   - Update new version (ch_cpuinfo ver 2.4.1-r01) 2021.06.19
+
+   - CPU information gathering method change for AMD CPU
+     ex. sed: -e expression #1, char 40: unterminated `s' command
+
+2.3.2-r01.
+   - Update new version (ch_cpuinfo ver 2.3.2-r01) 2021.06.18
+
+   - LANG.txt find location fixed
+
+   - admin_center.js file sedding method change
+
+   - Fix errors that occur during 2) Redo
+     ex. grep: Unmatched ( or \(
+
+   - CPU information gathering method change for AMD CPU
+     ex. sed: -e expression #1, char 40: unterminated `s' command
+
+2.2.1-r01.
+   - Update new version (ch_cpuinfo ver 2.2.1-r01) 2020.04.29
+
+   - undefined error fixed
+
+2.1.1-r01.
+   - Update new version (ch_cpuinfo ver 2.2.1-r01) 2020.04.27
+
+   - Support DSM 6.2.3-25423 
+
+   - Change of CPU information collection method, Collect using only /proc/cpuinfo.
+     Do not use dmidecode(for systems without dmidecode commands ...)
+
+   - Support MultiLanguage(User can modify LANG.txt and apply it)
+     Maintaining Korean / English support by default
+
+1.1.0-r01.
+   - Update new version (ch_cpuinfo ver 1.1.0-r01) 2019.08.01
+
+   - Consolidate and change to run in accordance with your DSM language environment
+
+   - Add link for cpu detail information(Intel, AMD Site Link) - Support above version 6.x 
+
+1.0.0-b01.
+   - Update new version (ch_cpuinfo ver 1.0.0-b01) 2019.07.29
+
+     Version view method change.
+
+     Support above version "DSM 6.2.2-24922 Update 2"
+
+5.2.
+   - Update new version (ch_cpuinfo ver 5.2) 2018.12.07
+     
+     Publish the source through github. 
+     
+     For versions DSM 6.x and later, you can use the binary as before. 
+     
+     If you use busybox in DSM 5.x, you can use it as a source file(ch_cpuinfo.sh).
+
+5.1.
+   - Use bash change to sh
+     #!/bin/bash
+     change to
+     #!/bin/sh
+
+5.0.
+   - Update new version (ch_cpuinfo ver 5.0) 2018.10.30
+     
+     Improved CPU information collection command
+
+     Change to pure core value without applying thread, and For Native H/W users,
+
+     changed to display the number of cpus, the number of cores per cpu, and the number of threads.
+
+     ex.
+     1 CPU 1 Core Not support HT ->  1 Core (1 CPU |  1 Thread)
+     1 CPU 2 Core Support HT ->   2 Cores(1 CPU/2 Cores | 4 Threads)
+     2 CPU 4 Core Support HT ->   8 Cores(2 CPUs/4 Cores | 16 Threads)
+
+4.0.
+   - Update new version (ch_cpuinfo ver 4.0) 2018.09.13
+
+     a. Mobile support (just 6.x / not yet 5.x)
+
+        You can see it when you go into mobile browser or "DS mobile" menu in "DS Finder"
+
+     b. Improved CPU information collection command
+
+        Some dmidecode commands have been found to be missing information and have been improved.(Thanks stefauresi !!! :))
+
+     c. Edited some variable names
+
+        I adjusted some inconsistently coded variables
+
+3.0.
+   - Update new version (ch_cpuinfo ver 3.0) 2018.08.26
+
+     I made the tool by adding and improving the function. Please refer to above for how to use it.
+
+     I delete the old version attached files, new version uploaded and attached.
+
+     If you use last version tool, you can use without restore.
